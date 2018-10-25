@@ -1,0 +1,15 @@
+{{> header}}
+
+<div class="container">
+        <div class="col-md-8">
+            <h3>Задачи от тема:</h3>
+            <select class="form-control" style="display: inline-block; margin-bottom:5px;">
+                {{> topics}}
+            </select>
+            <button style="display: inline-block" type="button" class="btn btn-primary embed-responsive-item" onclick="handler.showTasks()">Зареди</button>
+            <a href="#/create"><button style="display: inline-block" id="create" type="button" class="btn btn-primary embed-responsive-item">Направи нова тема</button></a>
+            <a href="#/createTask"><button id="createNewTask" style="display: inline-block" type="button" class="btn btn-primary embed-responsive-item">Направи нова задача</button></a>
+        </div>
+    </div>
+<div>
+{{> footer}}

@@ -1,0 +1,36 @@
+<form class="form-horizontal" action="#/createTask" method="post">
+    <fieldset>
+        <legend>Създаване на нова задача</legend>
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Тема:</label>
+            <div class="col-sm-4">
+                <select class="form-control" style="display: inline-block; margin-bottom:5px;">
+                    {{> topics}}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Автор:</label>
+            <div class="col-sm-4">
+                <input type="text" name="creator" class="form-control" id="inputCreator">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Задача:<p>/<a target="_blank" href="https://reu.dimacs.rutgers.edu/Symbols.pdf">символи</a>/</p></label>
+            <div class="col-sm-4">
+                <input type="text" name="exam" class="form-control" onkeyup="handler.changeTask()" id="inputExam">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-8 col-sm-offset-4">
+                <a href="#/cancelRequest"><button type="reset" class="btn btn-default">Отказване</button></a>
+                <button type="submit" class="btn btn-primary">Създаване</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

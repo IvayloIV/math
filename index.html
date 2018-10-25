@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  messageStyle: "none",
+    tex2jax: {
+      inlineMath: [["$","$"],["\\(","\\)"]]
+    }
+  });
+</script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="./node_modules/sammy/lib/min/sammy-0.7.6.min.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/requester.js"></script>
+    <script src="scripts/handler.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+
+<div id="loadingBox">Зареждане...</div>
+<div id="acceptBox"></div>
+<div id="errorBox"></div>
+<div id="main"></div>
+
+<div class="container" id="viewMath">
+    <div id="viewCreateMath">Как би изглеждала след създаването на задачата:&ensp;</div>
+    <div id="createViewTask">${}$</div>
+</div>
+
+<div class="container" id="visualMath">
+    <div id="createdBy"></div>
+    <div id="currentPage"></div>
+    <div id="helper">${}$</div>
+    <button type="button" class="btn btn-danger" id="delete">Изтрий задачата</button>
+</div>
+
+<button style="display: none" type="button" id="last" class="btn">&larr;&nbsp;Минала задача</button>
+<button style="display: none" type="button" id="next" class="btn">Следваща задача&nbsp;&rarr;</button>
+
+<script src="scripts/showEffects.js"></script>
+
+</body>
+</html>
